@@ -120,30 +120,4 @@ main {
   width: 100%;
 }
 
-/** h1#logo {
-  display:flex;
-} **/
 
-main[role="main"] {
-  display:flex;
-  justify-content:flex-end;
-} 
-
-header {
-  display:flex;
-  justify-content:center;
-  height:100px;
-}
-
-header h1#logo{
-  align-self:center;
-  color:#000;
-}
-
-/**
-article.post{
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-}
-**/
