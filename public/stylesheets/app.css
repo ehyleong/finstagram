@@ -70,6 +70,11 @@ main {
     border-radius: 50%;
 }
 
+.post .user-info {
+    display:flex;
+    align-items:center;
+}
+
 .post .user-info h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight:400;
