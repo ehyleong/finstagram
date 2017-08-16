@@ -62,8 +62,8 @@ main {
     margin-bottom: 48px;
 }
 
-.post .photo img {
-    filter: saturate(30%);
+.post .photo img:hover {
+    filter: saturate(10%);
 }
 
 .post .user-info img {
