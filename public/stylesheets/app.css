@@ -11,6 +11,7 @@ header {
     align-items:center;
     position: fixed;
     width: 100%;
+    z-index: 99;
 }
 
 header #logomark{
@@ -25,6 +26,7 @@ header #logomark{
 
 header h1#logo {
     font-family: 'Montserrat', sans-serif;
+    font-weight:700;
     color:white;
 }
 
@@ -60,9 +62,21 @@ main {
     margin-bottom: 48px;
 }
 
+.post .photo img {
+    filter: saturate(30%);
+}
+
 .post .user-info img {
     border-radius: 50%;
 }
 
-
+.post .user-info h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight:400;
+    font-size:0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color:ccc;
+    
+}
 
