@@ -6,38 +6,52 @@ header {
     background-image: -moz-linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
     background-image: -o-linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
     background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
-    color: #E8FDFF;
     display: flex;
     justify-content: center;
+    align-items:center;
     position: fixed;
     width: 100%;
 }
 
+header #logomark{
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+    background-color: white;
+    -webkit-mask-image: url(../../app/views/instameowLogo.svg);
+    mask-image: url(../../app/views/instameowLogo.svg);
+    margin-right:10px;
+}
+
 header h1#logo {
     font-family: 'Montserrat', sans-serif;
+    color:white;
 }
 
 header h1#logo:hover {
-    animation: colorChange 1s infinite;
+    animation: colorChange 2s infinite;
 }
 
 @keyframes colorChange {
-    0% {color: green;}
-    100% {color: red;}
+    0% {color: 00DBDE;}
+    100% {color: FC00FF;}
 }
+
+
 
 /** BODY **/
 
 body {
     background-color: whitesmoke;
     font-family: 'Roboto Slab', serif;
+    color:363636;
 }
 
 
 /** MAIN + POST */
 
 main {
-    background-color: whitesmoke;
+    background-color: white;
     padding: 16px;
 }
 
