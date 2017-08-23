@@ -21,7 +21,7 @@ header #logomark{
     background-color: white;
     -webkit-mask-image: url(../../app/views/instameowLogo.svg);
     mask-image: url(../../app/views/instameowLogo.svg);
-    margin-right:10px;
+    margin-right: 10px;
 }
 
 header h1#logo {
@@ -35,8 +35,8 @@ header h1#logo:hover {
 }
 
 @keyframes colorChange {
-    0% {color: 00DBDE;}
-    100% {color: FC00FF;}
+    0% {color: #00DBDE;}
+    100% {color: #FC00FF;}
 }
 
 
@@ -46,7 +46,7 @@ header h1#logo:hover {
 body {
     background-color: whitesmoke;
     font-family: 'Roboto Slab', serif;
-    color:363636;
+    color:#363636;
 }
 
 
@@ -81,7 +81,7 @@ main {
     font-size:0.8em;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color:ccc;
+    color:#CCC;
     
 }
 
