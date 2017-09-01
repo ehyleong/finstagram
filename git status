@@ -1,0 +1,52 @@
+[1mdiff --git a/app/actions.rb b/app/actions.rb[m
+[1mindex e48be8f..d35b8cb 100755[m
+[1m--- a/app/actions.rb[m
+[1m+++ b/app/actions.rb[m
+[36m@@ -1,4 +1,33 @@[m
+ get '/' do[m
+     @posts = Post.order(created_at: :desc)[m
+     erb(:index)[m
+[32m+[m[32mend[m
+[32m+[m
+[32m+[m[32mget '/signup' do #if a user navigates to the path "/signup"[m
+[32m+[m[32m    @user = User.new #setup empty @user object[m
+[32m+[m[32m    erb(:signup) #render "app/views/signup.erb"[m
+[32m+[m[32mend[m
+[32m+[m
+[32m+[m[32mpost '/signup' do[m
+[32m+[m
+[32m+[m[32m    # grab user input values from params[m
+[32m+[m[32m    email = params[:email][m
+[32m+[m[32m    avatar_url = params[:avatar_url][m
+[32m+[m[32m    username = params[:username][m
+[32m+[m[32m    password = params[:password][m
+[32m+[m[41m    [m
+[32m+[m[32m    #instantiate a User[m
+[32m+[m[32m    @user = User.new({ email: email, avatar_url: avatar_url, username: username, password: password})[m
+[32m+[m
+[32m+[m[32m    # if user validations pass and user is saved[m
+[32m+[m[32m    if @user.save[m
+[32m+[m[41m        [m
+[32m+[m[32m        "User #{username} saved!"[m
+[32m+[m[41m        [m
+[32m+[m[32m    else[m
+[32m+[m[41m        [m
+[32m+[m[32m        erb(:signup)[m
+[32m+[m[41m    [m
+[32m+[m[32m    end[m
+[32m+[m
+ end[m
+\ No newline at end of file[m
+[1mdiff --git a/app/models/user.rb b/app/models/user.rb[m
+[1mindex 70f07bf..ae202a6 100644[m
+[1m--- a/app/models/user.rb[m
+[1m+++ b/app/models/user.rb[m
+[36m@@ -4,4 +4,7 @@[m [mclass User < ActiveRecord::Base[m
+     has_many :comments[m
+     has_many :likes[m
+     [m
+[32m+[m[32m    validates_presence_of :email, :avatar_url, :username, :password[m
+[32m+[m[32m    validates_uniqueness_of :email, :username[m
+[32m+[m[41m    [m
+ end[m
+\ No newline at end of file[m
