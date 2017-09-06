@@ -7,27 +7,18 @@ header {
     background-image: -o-linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
     background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
     display: flex;
-    justify-content: center;
-    align-items:center;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     width: 100%;
     z-index: 99;
-}
-
-header #logomark{
-    width: 30px;
-    height: 30px;
-    background-size: 30px 30px;
-    background-color: white;
-    -webkit-mask-image: url(../../app/views/instameowLogo.svg);
-    mask-image: url(../../app/views/instameowLogo.svg);
-    margin-right: 10px;
 }
 
 header h1#logo {
     font-family: 'Montserrat', sans-serif;
     font-weight:700;
     color:white;
+    margin-left:20px;
 }
 
 header h1#logo:hover {
@@ -39,7 +30,23 @@ header h1#logo:hover {
     100% {color: #FC00FF;}
 }
 
+header > .login-info {
+    margin-right:20px;
+    
+}
 
+header > .login-info a {
+    padding-left:20px;
+    color: white;
+}
+
+header > .login-info a:hover {
+    text-decoration: underline;
+}
+
+header > .login-info #username {
+    color:white;
+}
 
 /** BODY **/
 
@@ -84,4 +91,5 @@ main {
     color:#CCC;
     
 }
+
 

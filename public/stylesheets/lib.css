@@ -31,9 +31,9 @@ header {
   align-items: baseline;
 }
 
-header > .login-info {
+/** header > .login-info {
   margin-left: auto;
-}
+}**/
 
 main {
   width: 450px;
