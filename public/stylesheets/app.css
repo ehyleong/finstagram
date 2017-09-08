@@ -1,27 +1,34 @@
 /** HEADER **/
 
 header {
-    background-color: #FF3CAC;
+/**    background-color: #FF3CAC;
+    background-image: -webkit-linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    background-image: -moz-linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    background-image: -o-linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);**/
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /**position: fixed;**/
+    width: 100%;
+    z-index: 99;
+    border-bottom:1px solid #cccccc;
+}
+
+header h1#logo a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight:700;
     background-image: -webkit-linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
     background-image: -moz-linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
     background-image: -o-linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
     background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    z-index: 99;
-}
-
-header h1#logo {
-    font-family: 'Montserrat', sans-serif;
-    font-weight:700;
-    color:white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-left:20px;
 }
 
-header h1#logo:hover {
+header h1#logo a:hover {
     animation: colorChange 2s infinite;
 }
 
@@ -37,7 +44,7 @@ header > .login-info {
 
 header > .login-info a {
     padding-left:20px;
-    color: white;
+    color: #2B86C5;
 }
 
 header > .login-info a:hover {
@@ -45,7 +52,7 @@ header > .login-info a:hover {
 }
 
 header > .login-info #username {
-    color:white;
+    color: #2B86C5;
 }
 
 /** BODY **/
@@ -64,9 +71,15 @@ main {
     padding: 16px;
 }
 
+main h2 {
+    text-align: center;
+    color: #36363d;
+
+}
+
 .post {
-    margin-top:100px;
-    margin-bottom: 48px;
+    margin-top:30px;
+    margin-bottom: 30px;
 }
 
 .post .photo img:hover {
@@ -93,3 +106,37 @@ main {
 }
 
 
+/** SIGNUP + LOGIN **/
+
+/** .login_container {
+    display:flex;
+    align-items: center;
+}**/
+
+/** FORM FIELDS **/
+
+label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    display: block;
+    margin-bottom: .5em;
+    color:#FF3CAC;
+}
+
+input[type=text], input[type=password], input[type=email] {
+    border: solid 1px #FF3CAC;
+    padding: 1em;
+    width: 100%;
+    font-size: 1em;
+    border-radius:6px;
+}
+
+.button {
+    padding: 1em;
+    border-radius: 6px;
+    background-color: #FF3CAC;
+    border: none;
+    width: 100%;
+    color: white;
+    display: inline-block;
+}
