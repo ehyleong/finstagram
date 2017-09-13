@@ -12,6 +12,7 @@
             <h1 id="logo"><a href="/">Instameow</a></h1>
             <div class="login-info">
                 <% if current_user %>
+                    <img src="<%= current_user.avatar_url %>" alt="<%= current_user.avatar_url %>" class="header-avatar">
                     <span id="username"><%= current_user.username %></span>
                     <a class="hover_underline" href="/logout">Logout</a>
                 <% else %>
