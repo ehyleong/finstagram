@@ -2,7 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="/stylesheets/normalize.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Slab">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Lato:300,400">
         <link rel="stylesheet" href="/stylesheets/lib.css">
         <link rel="stylesheet" href="/stylesheets/app.css">
         <title>Finstagram</title>
@@ -13,10 +13,10 @@
             <div class="login-info">
                 <% if current_user %>
                     <span id="username"><%= current_user.username %></span>
-                    <a href="/logout">Logout</a>
+                    <a class="hover_underline" href="/logout">Logout</a>
                 <% else %>
-                    <a href="/login">Login</a>
-                    <a href="/signup">Signup</a>
+                    <a class="hover_underline" href="/login">Login</a>
+                    <a class="hover_underline" href="/signup">Signup</a>
                 <% end %>
             </div>
         </header>

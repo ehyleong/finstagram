@@ -8,17 +8,17 @@
 </ul>
 
 <form method="POST" action="/signup">
-    <div class="form-group"></div>
+    <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" value="<%= @user.email %>">
+        <input type="email" id="email" name="email" value="<%= @user.email %>" placeholder="email@email.com">
     </div>
     <div class="form-group">
         <label for="avatar_url">Avatar URL</label>
-        <input type="text" id="avatar_url" name="avatar_url" value="<%= @user.avatar_url %>">
+        <input type="text" id="avatar_url" name="avatar_url" value="<%= @user.avatar_url %>" placeholder="avatar.jpg">
     </div>
     <div class="form-group">
         <label for="username">Username</label>
-        <input type="text" id="username" name="username" value="<%= @user.username %>">
+        <input type="text" id="username" name="username" value="<%= @user.username %>" placeholder="user_name">
     </div>
     <div class="form-group">
         <label for="password">Password</label>
